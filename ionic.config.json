@@ -1,0 +1,7 @@
+{
+  "name": "verifyOtpApi",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

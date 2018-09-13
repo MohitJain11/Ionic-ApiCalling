@@ -1,0 +1,58 @@
+<!--
+  Generated template for the VerifyOtpPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>verifyOtp</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <!-- <ion-grid padding>
+    <ion-row>
+      <ion-col col-3>
+        <ion-input type="number" #otp1 class="otp" [(ngModel)]="enteredOtpNumber[0]" value="{{otpNumber[0]}}" maxlength=1 (input)="next(otp2,otp1,0)">
+        </ion-input>
+      </ion-col>
+      <ion-col col-3>
+        <ion-input type="number" #otp2 class="otp" [(ngModel)]="enteredOtpNumber[1]" value="{{otpNumber[1]}}" maxlength=1 (input)="next(otp3,otp1,1)">
+        </ion-input>
+      </ion-col>
+      <ion-col col-3>
+        <ion-input type="number" #otp3 class="otp" [(ngModel)]="enteredOtpNumber[2]" value="{{otpNumber[2]}}" maxlength=1 (input)="next(otp4,otp2,2)">
+        </ion-input>
+      </ion-col>
+      <ion-col col-3>
+        <ion-input type="number" #otp4 class="otp" [(ngModel)]="enteredOtpNumber[3]" value="{{otpNumber[3]}}" maxlength=1 (input)="next(otp4,otp3,3)">
+        </ion-input>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <button padding ion-button round color="secondary" (click)="verifyOtp()">Verify OTP</button>
+  <label style="color:red;">{{error}}</label> -->
+
+  <form [formGroup]="verifyOtpForm" (ngSubmit)="verifyOtp()">
+    <ion-item padding>
+      <ion-input type="number" formControlName="otp1" #otp1 class="otp" [(ngModel)]="enteredOtpNumber[0]" value="{{otpNumber[0]}}"
+        maxlength=1 (input)="next(otp2,otp1,0)"></ion-input>
+      <ion-input type="number" formControlName="otp2" #otp2 class="otp" [(ngModel)]="enteredOtpNumber[1]" value="{{otpNumber[1]}}"
+        maxlength=1 (input)="next(otp3,otp1,1)">
+      </ion-input>
+      <ion-input type="number" formControlName="otp3" #otp3 class="otp" [(ngModel)]="enteredOtpNumber[2]" value="{{otpNumber[2]}}"
+        maxlength=1 (input)="next(otp4,otp2,2)">
+      </ion-input>
+      <ion-input type="number" formControlName="otp4" #otp4 class="otp" [(ngModel)]="enteredOtpNumber[3]" value="{{otpNumber[3]}}"
+        maxlength=1 (input)="next(otp4,otp3,3)">
+      </ion-input>
+    </ion-item>
+    <button ion-button type="submit" round color="secondary" [disabled]="!verifyOtpForm.valid">Send OTP</button>
+    <label style="color:red;">{{error}}</label>
+  </form>
+
+</ion-content>

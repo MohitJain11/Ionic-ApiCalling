@@ -1,0 +1,32 @@
+page-verify-otp {
+    .otp {
+    //     color: darkgray;
+    //     border-style: none;
+    //     width: 50px;
+    //     height: 50px;
+    //     font-size: 50px;
+    
+    border: 1px solid darkgray !important; 
+    
+      }
+      
+      .ion-col {
+        border: 2px solid darkgray
+      }
+      
+      table {
+        border-collapse: collapse;
+      }
+      .text-input-md {
+        margin: 13px 8px;
+        padding: 0;
+        width: calc(100% - 8px - 8px);
+    //    border: solid;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+   
+
+   
+}
